@@ -1,0 +1,113 @@
+{% extends 'chat/base.html' %}
+{% load static %}
+
+{% block title %}
+    Welcome to    AI VideoChat
+{% endblock %}
+
+{% block css %}
+
+<style>
+    /* #chatLog {
+        height: 300px;
+        background-color: #FFFFFF;
+        resize: none;
+        color: black;
+    } */
+
+    #onlineUsersSelector {
+        height: 300px;
+    }
+
+    #chatLog {
+        resize: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 300px;
+
+    }
+
+    .message {
+        max-width: 70%;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
+
+    .sender {
+        align-self: flex-start;
+        background-color: #e6f7ff;
+        color: #007bff;
+    }
+
+    .receiver {
+        align-self: flex-end;
+        background-color: #dfffd6;
+        color: #28a745;
+    }
+
+    .sender-name {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container mt-3 p-5">
+    <h2>Bharat Builds Chat App </h2>
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <div class="mb-2">
+                <label for="chatLog">Room: #{{ room_name }} | Name: #{{user_name}}</label>
+
+                <div class="form-control" id="chatLog" style="height: 300px; overflow-y: scroll;">
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" id="chatMessageInput" placeholder="Enter your chat message">
+                <div class="input-group-append">
+                    <button class="btn btn-success" id="chatMessageSend" type="button">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <label for="onlineUsers">Online users</label>
+            <select multiple class="form-control" id="onlineUsersSelector">   </select>
+        </div>
+
+    </div>
+    {{ room_name|json_script:"roomName" }}
+    {{ user_name|json_script:"userName" }}
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% block js %}
+
+<script src="{% static 'chat/room.js' %}"></script>
+
+{% endblock %}
