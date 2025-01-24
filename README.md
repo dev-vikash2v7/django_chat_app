@@ -1,15 +1,3 @@
-# Django WebSocket Chat Application
-
-This project is a real-time chat application built with Django, Django Channels, WebSocket, and JavaScript. It allows users to join chat rooms, exchange messages in real-time, and displays a list of online users.
-
----
-
-## Features
-- Real-time messaging using WebSocket.
-- Separate styling for sender and receiver messages.
-- Dynamic user list that updates when users join or leave the room.
-
----
 
 ## Prerequisites
 Make sure you have the following installed:
