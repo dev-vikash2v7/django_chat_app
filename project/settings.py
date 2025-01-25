@@ -1,7 +1,7 @@
 
 
 from pathlib import Path
-import os  , django
+import os  
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,19 +12,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-django.setup()
 
 
 INSTALLED_APPS = [
-    'chat',
-    'daphne',
-    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chat',
+    'daphne',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -64,14 +63,6 @@ ASGI_APPLICATION = 'project.asgi.application'
 
 
 
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("127.0.0.1", 6379)],
-#         },
-#     },
-# }
 
 # for development purpose
 CHANNEL_LAYERS = {
