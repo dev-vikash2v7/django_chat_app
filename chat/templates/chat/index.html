@@ -1,9 +1,7 @@
 {% extends 'chat/base.html' %}
 {% load static %}
 
-{% block title %}
-    DjangoChat Room
-{% endblock %}
+
 
 {% block body %}
 
@@ -31,9 +29,11 @@
             <div class="col-12 col-md-4">
                 <label for="roomSelect">Active rooms</label>
                 <select multiple class="form-control" id="roomSelect">
-                    {% for room in rooms %}
-                        <option>{{ room }}</option>
-                    {% endfor %}
+                    {% if rooms %}
+                        {% for room in rooms %}
+                            <option value="{{ room }}">{{ room }}</option>
+                        {% endfor %}
+                    {% endif %}
                 </select>
             </div>
 

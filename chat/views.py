@@ -4,10 +4,13 @@ from chat.models import Room,User
 
 
 def index_view(request):
-
+    rooms = Room.objects.all()
     return render(request, 'chat/index.html', {
-        'rooms': Room.objects.all(),
+        'rooms': rooms if rooms.exists() else [],
     })
+     
+
+    
 
 
 def room_view(request, room_name , user_name):
