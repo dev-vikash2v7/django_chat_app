@@ -2,8 +2,7 @@
 
 from pathlib import Path
 import os  
-import django
-django.setup()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
