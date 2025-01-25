@@ -10,7 +10,6 @@ class RoomAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('id' ,  'get_user','get_room',  'content' , 'timestamp' )
 
-# Register your models here.
 admin.site.register(User , UserAdmin)
 admin.site.register(Room , RoomAdmin)
 admin.site.register(Message , MessageAdmin)
