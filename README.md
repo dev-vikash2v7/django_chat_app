@@ -4,8 +4,6 @@ Make sure you have the following installed:
 1. Python 3.8+.
 2. Django 4.x or later.
 3. Django Channels.
-4. Redis (for channel layers).
-5. Node.js and npm (if using frontend tools).
 
 ---
 

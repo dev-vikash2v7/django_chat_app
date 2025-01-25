@@ -1,7 +1,7 @@
 
 
 from pathlib import Path
-import os 
+import os  , django
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,7 +12,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+django.setup()
 
 
 INSTALLED_APPS = [
