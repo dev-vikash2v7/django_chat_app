@@ -7,7 +7,7 @@
       "region": "us-west2",
       "runtime": "V2",
       "numReplicas": 1,
-      "startCommand": "web: gunicorn 'project.asgi'",
+      "startCommand": "gunicorn project.asgi",
       "sleepApplication": false,
       "multiRegionConfig": {
         "us-west2": {
