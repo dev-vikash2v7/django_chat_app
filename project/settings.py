@@ -16,6 +16,7 @@ django.setup()
 
 
 INSTALLED_APPS = [
+    'chat',
     'daphne',
     'channels',
     'django.contrib.admin',
@@ -24,7 +25,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chat'
 ]
 
 MIDDLEWARE = [
