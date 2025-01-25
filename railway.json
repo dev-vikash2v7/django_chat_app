@@ -7,7 +7,7 @@
       "region": "us-west2",
       "runtime": "V2",
       "numReplicas": 1,
-      "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn project.wsgi",
+      "startCommand": "python manage.py migrate  && gunicorn project.wsgi",
       "sleepApplication": false,
       "multiRegionConfig": {
         "us-west2": {
