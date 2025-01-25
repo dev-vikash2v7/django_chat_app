@@ -125,7 +125,7 @@ function connect() {
             case "user_join":
                 console.log(data.user_name , userName)
                 if( data.user_name != userName  ){
-                 alert(data.user_name + " is joined the room")
+                 alert(data.user_name + " joined the room")
                  onlineUsersSelectorAdd(data.user_name);
                  onlineUsersSelectorRemove('empty');
                 }
