@@ -7,7 +7,7 @@
       "region": "us-west2",
       "runtime": "V2",
       "numReplicas": 1,
-      "startCommand": "python manage.py migrate && gunicorn project.asgi",
+      "startCommand": "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 project.asgi:application",
       "sleepApplication": false,
       "multiRegionConfig": {
         "us-west2": {
